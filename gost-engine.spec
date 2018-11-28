@@ -1,4 +1,5 @@
 %define lbname gost
+%define engver 1.1
 
 %global commit0 0b50e0028fa9d2cfb9648f8f3209e89d75e311c1
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
@@ -46,7 +47,7 @@ popd
 %doc README.md README.gost INSTALL.md
 %license LICENSE
 %{_bindir}/%{lbname}*
-%{_libdir}/engines-1.1/%{lbname}.so
+%{_libdir}/engines-%{engver}/%{lbname}.so
 %{_mandir}/man1/%{lbname}*.*
 
 %changelog
