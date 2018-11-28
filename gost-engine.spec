@@ -17,7 +17,6 @@ Source0: %{url}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 BuildRequires: openssl-devel
 BuildRequires: ninja-build
 BuildRequires: cmake
-BuildRequires: perl
 BuildRequires: gcc
 
 %description
@@ -35,16 +34,11 @@ pushd %{_target_platform}
 popd
 %ninja_build -C %{_target_platform}
 
-%check
-pushd %{_target_platform}
-#    ctest --output-on-failure
-popd
-
 %install
 %ninja_install -C %{_target_platform}
 
 %files
-%doc README.md README.gost INSTALL.md
+%doc README.md README.%{lbname} INSTALL.md
 %license LICENSE
 %{_bindir}/%{lbname}*
 %{_libdir}/engines-%{engver}/%{lbname}.so
