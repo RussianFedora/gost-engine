@@ -51,3 +51,5 @@ popd
 %{_mandir}/man1/%{lbname}*.*
 
 %changelog
+* Wed Nov 28 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 1.1.0.3-1.20181118git0b50e00
+- Initial SPEC release.
